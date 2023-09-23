@@ -3,8 +3,14 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "settings": { 
-        "git.path": "/usr/bin/git",
-        "terminal.integrated.shell.linux": "/bin/bash"
-    }
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.Go"
+            ]
+        }
+    },
+    "mounts": [
+        "type=bind,source=${localEnv:HOME}/.ssh,target=/root/.ssh,readonly"
+    ]
 }
